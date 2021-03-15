@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
+type Product {
+  id: ID!
+  product: String!
+}
+
+type Query {
+  products: [Product!]!
+  findOneProduct(id: Float!): Product!
+}
+
+type Mutation {
+  """Create a new product"""
+  createProduct(data: CreateProductInput!): Product!
+
+  """Update a product"""
+  updateProduct(data: UpdateProductInput!): Product!
+
+  """Delete a product"""
+  deleteProduct(id: Float!): Product!
+}
+
+"""New Product Input"""
+input CreateProductInput {
+  product: String!
+}
+
+"""Update Product Input"""
+input UpdateProductInput {
+  id: Float!
+  product: String!
+}
