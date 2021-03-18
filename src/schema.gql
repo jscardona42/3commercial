@@ -18,27 +18,20 @@ type Product {
 }
 
 type Query {
-  products: [Product!]!
+  findAllProducts: [Product!]!
   findOneProduct(id: Float!): Product!
 }
 
 type Mutation {
-  """Create a new product"""
   createProduct(data: CreateProductInput!): Product!
-
-  """Update a product"""
   updateProduct(data: UpdateProductInput!): Product!
-
-  """Delete a product"""
   deleteProduct(id: Float!): Product!
 }
 
-"""New Product Input"""
 input CreateProductInput {
   product: String!
 }
 
-"""Update Product Input"""
 input UpdateProductInput {
   id: Float!
   product: String!

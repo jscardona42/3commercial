@@ -13,14 +13,14 @@ export class Product {
   product: string
 }
 
-@InputType({ description: "New Product Input" })
+@InputType()
 export class CreateProductInput {
   @Field()
   @IsNotEmpty()
   product: string
 }
 
-@InputType({ description: "Update Product Input" })
+@InputType()
 export class UpdateProductInput {
   @Field()
   id: number

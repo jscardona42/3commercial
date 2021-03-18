@@ -14,10 +14,6 @@ import { ProductService } from './products/product.service';
       buildSchemaOptions: {
         orphanedTypes: [Product],
       },
-      // typePaths: ['./**/*.graphql'],
-      // definitions: {
-      //   path: join(process.cwd(), 'src/graphql.schema.ts'),
-      // },
     })
   ],
   controllers: [],
