@@ -15,7 +15,7 @@ export class ProductResolver {
   }
 
   @Query((returns) => Product)
-  @UseGuards(GqlAuthGuard)
+  // @UseGuards(GqlAuthGuard)
   findOneProduct(@Args('id') id: number): Promise<Product> {
     return this.productService.findOneProduct(id);
   }
