@@ -1,6 +1,6 @@
 import { UseGuards } from '@nestjs/common';
 import { Resolver, Query, Mutation, Args, Context } from '@nestjs/graphql';
-import { GqlAuthGuard } from './auth/authguard.guard';
+import { GqlAuthGuard } from '../auth/authguard.guard';
 import { CreateProductInput, UpdateProductInput, Product } from './product.entity';
 import { ProductService } from './product.service';
 
